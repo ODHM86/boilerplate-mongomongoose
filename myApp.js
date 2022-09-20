@@ -1,7 +1,7 @@
 require('dotenv').config();
 let mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://odhm86:@1Pumasgol@@cluster0.rnwkrd1.mongodb.net/fcc-mongodb-and-mongoose?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // const Schema = mongoose.Schema;
 let personSchema = new mongoose.Schema({
